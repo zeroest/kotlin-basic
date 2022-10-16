@@ -1,4 +1,4 @@
-package me.zeroest.kotlin.basic.enum
+package me.zeroest.kotlin.basic.enumclass
 
 interface Payable {
     fun isPayable(): Boolean
