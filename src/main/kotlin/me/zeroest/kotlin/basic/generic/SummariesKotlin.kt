@@ -7,13 +7,13 @@ import java.util.Objects
 import java.util.Optional
 
 object SummariesKotlin {
-    fun <T : Summary?> builder(standardSummaryMap: MutableMap<String?, T>): Builder<T> {
+    fun <T : Summary> builder(standardSummaryMap: MutableMap<String, T>): Builder<T> {
         return Builder(standardSummaryMap)
     }
 
     @SuppressWarnings("unchecked")
-    fun <T : Summary?, E : Class<out SummaryState?>?> builder(enumClass: E): Builder<T> {
-        val standardSummaryMap = Arrays.stream(enumClass!!.enumConstants)
+    fun <T : Summary, E : Class<out SummaryState>> builder(enumClass: E): Builder<T> {
+        val standardSummaryMap = Arrays.stream(enumClass.enumConstants)
             .collect(Collectors.toMap({ state: SummaryState? -> state!!.stateCode }) { state: SummaryState? ->
                 DefaultSummary(
                     state!!.stateCode,
@@ -25,7 +25,7 @@ object SummariesKotlin {
         return Builder(standardSummaryMap)
     }
 
-    class Builder<T : Summary?>(private val summaryMap: MutableMap<String?, T>) {
+    class Builder<T : Summary>(private val summaryMap: MutableMap<String, T>) {
         fun build(): List<T> {
             val totalCount = summaryMap.values.stream()
                 .mapToLong { obj: T -> obj!!.count }
