@@ -30,8 +30,8 @@ public class Hero {
     public static void main(String[] args) {
         Hero hero = new Hero();
 
-        hero.setName("zero");
-        hero.setAge(30);
+//        hero.setName("zero");
+//        hero.setAge(30);
         hero.setAddress("moon");
 
         System.out.println("hero = " + hero);

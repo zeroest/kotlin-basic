@@ -49,6 +49,10 @@ subprojects {
         implementation("org.springframework.boot:spring-boot-starter-data-jpa")
         runtimeOnly("com.h2database:h2")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+        implementation("io.arrow-kt:arrow-core:1.1.2")
+        // https://mvnrepository.com/artifact/org.projectlombok/lombok
+        compileOnly("org.projectlombok:lombok:1.18.24")
     }
 }
 
