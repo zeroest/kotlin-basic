@@ -13,6 +13,8 @@ repositories {
 
 dependencies {
     implementation("io.arrow-kt:arrow-core:1.1.2")
+// https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly("org.projectlombok:lombok:1.18.24")
 
     testImplementation(kotlin("test"))
 }
