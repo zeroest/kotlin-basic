@@ -6,7 +6,8 @@
 ## 메타데이터 설정
 
 - spring-boot-autoconfigure
-- META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
+  - META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
+  - Spring boot 2.7 이하 버전에서는 META-INF/spring.factories 참조
 - 위 파일 내에 자동설정을 구현한 Candidate 클래스들의 목록이 등록
 - @EnableAutoConfiguration 에너테이션이 존재하면 자동 설정 클래스를 검색하고 조건에 따라 자동설정 클래스 로드
 
