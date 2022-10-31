@@ -43,6 +43,7 @@ public class TodoService {
             .description(request.getDescription())
             .done(false)
             .createdAt(LocalDateTime.now())
+            .updatedAt(LocalDateTime.now())
             .build();
         return todoRepository.save(todo);
     }
