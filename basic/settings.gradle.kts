@@ -8,3 +8,4 @@ include (
     "zeroest-custom-spring-boot-autoconfigure",
     "zeroest-custom-spring-boot-starter",
 )
+include("coroutine")
